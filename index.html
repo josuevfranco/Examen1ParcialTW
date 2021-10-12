@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Certification</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="css/headerstyles.css">
+    <script src="https://kit.fontawesome.com/62034752b0.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
+    <!--JavaScript-->
+    <script>
+    window.onload = function(){
+        var elemento = document.getElementById('lienzo');
+        if (elemento && elemento.getContext) {
+            var lienzo = elemento.getContext('2d');
+            if (lienzo) {
+                lienzo.font="bold 20px verdana, sans-serif";
+                lienzo.fillText("WE GO",50,20);
+                lienzo.translate(50,70);
+                lienzo.rotate(Math.PI/180*45);
+                lienzo.fillText("OUTSIDE",0,0);
+                lienzo.rotate(-Math.PI/180*45);
+                lienzo.translate(0,100);
+                lienzo.scale(2,2);
+                lienzo.fillText("THE TRADITIONAL",0,0);
+            }
+        }else{
+        }
+    }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
+        <div class="container-fluid">
+            <h2></h2>
+           <img  src="images/Open_English_Logo.png" style="width: 190px;">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown  main-menu">
+                  <a class="nav-link dropdown-toggle" href="#" >Our Agreements</a>
+                </li>
+                <li class="nav-item dropdown main-menu">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Our Legal Practice
+                    </a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a  class="nav-link" href="#">Generations</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+    <div class="presentation">
+        <section class="pt-5 pb-5 mt-0 align-items-center d-flex bg-dark" style="height:70vh; background-size: cover; background-image: url(images/nav1.jpg);">
+            <div class="container-fluid">
+                <div class="row  justify-content-center align-items-center d-flex text-center h-100">
+                    <div class="col-12 col-md-8  h-50 ">
+                        <div class="certificated">
+                            <h1 class="display-2  text-light mb-2 mt-5"><strong>GET CERTIFICATED</strong> </h1>
+                        </div>
+                        <div class="certificated">
+                        <p class="lead  text-light mb-5">Discover what kinds of International Certifications you can apply for</p>
+                        </div>
+                        <p><a href="#" class="btn bg-danger shadow-lg btn-round text-light btn-lg btn-rised">START NOW></a></p>      
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="presentation">
+        <p style="border-top: 16px solid rgb(16,121,217);">&nbsp;</p>
+    </div>
+
+    <div id="cointener2">
+        <section id="cajalienzo">
+            <canvas id="lienzo" width="500" height="300">
+                Su navegador no soporta el elemento canvas
+            </canvas>
+        </section>
+
+
+
+        <section id="cajalienzo2">
+            <span> <h2>Certifications for students</h2> </span><br>
+            <span>More than 25,000 organisations in 130 countries around the world rely on our</span><br>
+            <span>secure exams and tests as proof of English language ability.</span> <br>
+            <span>Our unique approach encourages continuous progression with a clear path to improve language skills.</span><br>
+            <span>We have qualifications for schools, general and higher education, and business.</span>
+        </section>
+    </div>
+
+    <div class="flex-container">
+        <div class="child1">
+            <img src="images/n1.webp" alt="">
+            <p style="border-top: 16px solid rgba(16,121,217,0.5);">&nbsp;</p>
+            <h2 class="titles">Cambridge English: Starters</h2>
+            <pre class="phagrpah"> This exam is for younger learners. It 
+ helps younger children take their
+ first steps towards learning English</pre>
+        </div>
+        <div class="child2">
+            <img src="images/n2.webp" alt="">
+            <p style="border-top: 16px solid rgba(16,121,217,0.5);">&nbsp;</p>
+            <h2 class="titles">Cambridge English: Movers</h2>
+            <pre class="phagrpah"> This test introduces children to spoken
+ and written English daily. It is an 
+ excellent way for them to gain confi-
+ dence and improve their level</pre>     
+        </div>
+        <div class="child3">
+            <img src="images/n3.webp" alt="">
+            <p style="border-top: 16px solid rgba(16,121,217,0.5);">&nbsp;</p>
+            <h2 class="titles">Cambridge English: Flyers</h2>
+            <pre class="phagrpah"> This test is created specifically for
+ younger children. It strengthens their 
+ confidence and lays the foundation for
+ future success in English</pre>
+        </div>
+        <div class="child1">
+            <img src="images/n4.webp" alt="">
+            <p style="border-top: 16px solid rgba(16,121,217,0.5);">&nbsp;</p>
+            <h2 class="titles">Key English Test (KET)</h2>
+            <pre class="phagrpah"> KET certification is an elementary exam
+ that assesses the ability to work with 
+ frequently used spoken and written text
+ that make immediate reference to
+ everyday life.</pre>   
+        </div>
+        <div class="child2">
+            <img src="images/n5.webp" alt="">
+            <p style="border-top: 16px solid rgba(16,121,217,0.5);">&nbsp;</p>
+            <h2 class="titles">Preliminary English Test</h2>
+            <pre class="phagrpah"> IT is an intermediate exam that assesses
+ the ability to work with frequently used 
+ spoken and written texts that refer to
+ known situations.</pre> 
+        </div>
+        <div class="child3">
+            <img src="images/n6.webp" alt="">
+            <p style="border-top: 16px solid rgba(16,121,217,0.5);">&nbsp;</p>
+            <h2 class="titles">First Certificate in English</h2>
+            <pre class="phagrpah"> IT is an an intermediate-high level exam
+ that assesses the ability to interact 
+ spontaneously and fluently, clearly
+ expressing views on various topics.</pre> 
+        </div>
+        <div class="child2">
+            <img src="images/n7.webp" alt="">
+            <p style="border-top: 16px solid rgba(16,121,217,0.5);">&nbsp;</p>
+            <h2 class="titles">Certificate of Proficiency in English</h2>
+            <pre class="phagrpah"> The CPE is a proficiency test for those
+ students who already have an advanced
+ level and communicate very well in
+ virtually all situations</pre>
+        </div>
+        <div class="child3">
+            <img src="images/n8.webp" alt="">
+            <p style="border-top: 16px solid rgba(16,121,217,0.5);">&nbsp;</p>
+            <h2 class="titles">Certificate in Advanced English</h2>
+            <pre class="phagrpah"> CAE is an advanced exam that assesses
+ the ability to communicate in English a
+ work and in education.</pre>
+        </div>
+    </div>
+
+    <br><br>
+    <div class="pleca-colores"></div>
+
+    <div id="c">
+        <br>
+        <h1 style="text-align: center;">WANT TO IMPROVE YOUR ENGLISH?</h1>
+        <p style="text-align: center;">Practice material and learning resources to help you improve your English.</p>
+    
+
+    <div id="cotainer3">
+        <div id="c1">
+            <a href="numbers.html">
+                <img class="colorss" src="images/colors.jpg" height="100px" width="100px" alt="">
+            </a>
+            <p>Learn Number</p>
+        </div>
+        <div id="c2">
+            <a href="verbs.html">
+                <img class="colorss" src="images/verbs.png" height="100px" width="100px" alt="">
+            </a>
+            <p>Practice Verbs</p>      
+        </div>
+        <div id="c3">
+            <a href="animals.html">
+                <img class="colorss" src="images/animals.jpg" height="100px" width="100px" alt="">
+            </a>
+            <p>Explore Animals</p>           
+        </div>
+    </div>
+
+    </div>
+
+    <div class="pleca-colores"></div>
+    <div id="cointener5">
+        <section id="cajalienzo">
+            <br><br><br><br><br><br><br><br>
+            <h1>Why are we your best option?</h1>
+            <span>Learning is no longer only limited to the classroom and the exercise book,<span><br>
+            <span>we have digital resources, accessible prices, international certification,</span><br>
+            <span>trained teachers, specialized teachings by age and technique and experience</span><br>
+            <span>with the best teaching methodologies.</span>
+        </section>
+
+        <section id="cajalienzo2">
+            <img src="images/women.jpg" alt="">
+        </section>
+    </div>
+
+    <div class="presentation">
+        <p style="border-top: 16px solid rgb(16,121,217);">&nbsp;</p>
+    </div>
+
+    <div class="precio">
+        <div class="precioHijo">
+            <h2 style="text-align: center; color: blue;">PRICES </h2>
+            <p style="border-top: 10px solid rgb(111,210,128);">&nbsp;</p>
+            <h3>Exam CAMBRIDGE</h3>
+            <p> <span style="font-size: 18px; color: blue;"> <strong>4 modules:</strong> </span>  <span style="font-size: 20px;">$3100 (import 2021)</span> </p>
+            <br><b></b>
+            <pre>                                                                                      </pre>
+            <p style="text-align: center;">Consider 16 days in advance to register and pay, approved by Josue.</p>
+        </div>
+    </div>
+									
+    <footer class="new_footer_area bg_color">
+        <div class="new_footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
+                            <p>Try our quick, free online tests to find out what your level of English is.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18">Download</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="#">Company</a></li>
+                                <li><a href="#">Android App</a></li>
+                                <li><a href="#">ios App</a></li>
+                                <li><a href="#">Desktop</a></li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">My tasks</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18">Help</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Term &amp; conditions</a></li>
+                                <li><a href="#">English Courses</a></li>
+                                <li><a href="#">English for business</a></li>
+                                <li><a href="#">Study Abroad</a></li>
+                                <li><a href="#">Teacher Training</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18">Team Solutions</h3>
+                            <div class="f_social_icon">
+                                <a href="#" class="fab fa-facebook"></a>
+                                <a href="#" class="fab fa-twitter"></a>
+                                <a href="#" class="fab fa-linkedin"></a>
+                                <a href="#" class="fab fa-pinterest"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bg">
+                <div class="footer_bg_one"></div>
+                <div class="footer_bg_two"></div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-sm-7">
+                        <p class="mb-0 f_400">© Open English... 2021 All rights reserved.</p>
+                        <p class="mb-0 f_400">DEVELOPED BY JOSUE VAZQUEZ FRANCO.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

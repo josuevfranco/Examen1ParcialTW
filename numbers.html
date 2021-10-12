@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUMBERS IN ENGLISH</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="css/headerstyles.css">
+    <script src="https://kit.fontawesome.com/62034752b0.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/colors.css">
+    <!--Javascript-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+     
+    <script type="text/javascript">
+     
+        var correctCards = 0;
+    $( init );
+    
+    function init() {
+    
+    $('#successMessage').hide();
+    $('#successMessage').css( {
+        left: '580px',
+        top: '250px',
+        width: 0,
+        height: 0
+    } );
+    
+
+    correctCards = 0;
+    $('#cardPile').html( '' );
+    $('#cardSlots').html( '' );
+    
+
+    var numbers = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+    numbers.sort( function() { return Math.random() - .5 } );
+    
+    for ( var i=0; i<10; i++ ) {
+        $('<div>' + numbers[i] + '</div>').data( 'number', numbers[i] ).attr( 'id', 'card'+numbers[i] ).appendTo( '#cardPile' ).draggable( {
+        containment: '#content',
+        stack: '#cardPile div',
+        cursor: 'move',
+        revert: true
+        } );
+    }
+    
+   
+    var words = [ 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten' ];
+    for ( var i=1; i<=10; i++ ) {
+        $('<div>' + words[i-1] + '</div>').data( 'number', i ).appendTo( '#cardSlots' ).droppable( {
+        accept: '#cardPile div',
+        hoverClass: 'hovered',
+        drop: handleCardDrop
+        } );
+    }
+    
+    }
+    function handleCardDrop( event, ui ) {
+    var slotNumber = $(this).data( 'number' );
+    var cardNumber = ui.draggable.data( 'number' );
+    
+    
+    if ( slotNumber == cardNumber ) {
+        ui.draggable.addClass( 'correct' );
+        ui.draggable.draggable( 'disable' );
+        $(this).droppable( 'disable' );
+        ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
+        ui.draggable.draggable( 'option', 'revert', false );
+        correctCards++;
+    } 
+  
+    
+    if ( correctCards == 10 ) {
+        $('#successMessage').show();
+        $('#successMessage').animate( {
+        left: '380px',
+        top: '200px',
+        width: '400px',
+        height: '100px',
+        opacity: 1
+        } );
+    }
+    
+    }
+     
+    </script>
+</head>
+<body>
+
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
+        <div class="container-fluid">
+            <h2></h2>
+           <img  src="images/Open_English_Logo.png" style="width: 190px;">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown  main-menu">
+                  <a class="nav-link dropdown-toggle" href="#" >Our Lawyers</a>
+                </li>
+                <li class="nav-item dropdown main-menu">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Our Legal Practice
+                    </a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a  class="nav-link" href="#">Disclaimer</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--    <section id="cajalienzo">
+        <canvas id="lienzo" width="500" height="300">
+            Su navegador no soporta el elemento canvas
+        </canvas>
+    </section>-->
+
+    <br><br><br><br>
+    <h1>LEARN THE BASIC NUMBERS AND THEIR CORRECT PRONUNCIATION</h1>
+    <div class="pleca-colores"></div>
+    <h6> <b>Instructions.</b> </h6>
+    <p>Click on each of the following numbers
+      Listen carefully to the correct pronunciation of each number and at the end drag the number with its correct spelling.</p>
+
+    <table>
+      <tr>
+        <td>
+          <a onclick="myAudioFunction('one');">
+            <img src="images/one.JPG" height="30px" width="30px">
+          </a>
+        </td>
+        <td>
+          <a onclick="myAudioFunction('two');">
+            <img src="images/two.JPG" height="30px" width="30px">
+          </a>
+        </td>
+        <td>
+          <a onclick="myAudioFunction('three');">
+            <img src="images/three.JPG"  height="30px" width="30px">
+          </a>
+        </td>
+        <td>
+          <a onclick="myAudioFunction('four');">
+            <img src="images/four.JPG"  height="30px" width="30px">
+          </a>
+        </td>
+        <td>
+          <a onclick="myAudioFunction('five');">
+            <img src="images/five.JPG"  height="30px" width="30px">
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a onclick="myAudioFunction('six');">
+            <img src="images/six.JPG"  height="30px" width="30px">
+          </a>
+        </td>
+        <td>
+          <a onclick="myAudioFunction('seven');">
+            <img src="images/seven.JPG"  height="30px" width="30px">
+          </a>
+        </td>
+        <td>
+          <a onclick="myAudioFunction('eight');">
+            <img src="images/eight.JPG"  height="30px" width="30px">
+          </a>
+        </td>
+        <td>
+          <a onclick="myAudioFunction('nine');">
+            <img src="images/nine.JPG"  height="30px" width="30px">
+          </a>
+        </td>
+        <td>
+          <a onclick="myAudioFunction('ten');">
+            <img src="images/ten.JPG"  height="30px" width="30px" >
+          </a>
+        </td>
+      </tr>
+      <img src="images/listen.png" alt=""  height="30px" width="30px">
+    </table>
+
+    <div id="content">
+ 
+        <div id="cardPile"> </div>
+        <div id="cardSlots"> </div>
+       
+        <div id="successMessage">
+          <h2>YOU DID IT AMAZING!</h2>
+          <button onclick="init()">Play Again</button>
+        </div>
+       
+    </div>
+
+    
+    <button type="button" class="btn btn-secondary btn-lg btn-block">
+      <a href="index.html" style="color: wheat;">BACK TO THE HOME PAGE</a>
+    </button><br>
+    <div class="pleca-colores"></div>
+
+
+    <footer class="new_footer_area bg_color">
+      <div class="new_footer_top">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-3 col-md-6">
+                      <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                          <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
+                          <p>Try our quick, free online tests to find out what your level of English is.</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                      <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                          <h3 class="f-title f_600 t_color f_size_18">Download</h3>
+                          <ul class="list-unstyled f_list">
+                              <li><a href="#">Company</a></li>
+                              <li><a href="#">Android App</a></li>
+                              <li><a href="#">ios App</a></li>
+                              <li><a href="#">Desktop</a></li>
+                              <li><a href="#">Projects</a></li>
+                              <li><a href="#">My tasks</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                      <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                          <h3 class="f-title f_600 t_color f_size_18">Help</h3>
+                          <ul class="list-unstyled f_list">
+                              <li><a href="#">FAQ</a></li>
+                              <li><a href="#">Term &amp; conditions</a></li>
+                              <li><a href="#">English Courses</a></li>
+                              <li><a href="#">English for business</a></li>
+                              <li><a href="#">Study Abroad</a></li>
+                              <li><a href="#">Teacher Training</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                      <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                          <h3 class="f-title f_600 t_color f_size_18">Team Solutions</h3>
+                          <div class="f_social_icon">
+                              <a href="#" class="fab fa-facebook"></a>
+                              <a href="#" class="fab fa-twitter"></a>
+                              <a href="#" class="fab fa-linkedin"></a>
+                              <a href="#" class="fab fa-pinterest"></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="footer_bg">
+              <div class="footer_bg_one"></div>
+              <div class="footer_bg_two"></div>
+          </div>
+      </div>
+      <div class="footer_bottom">
+          <div class="container">
+              <div class="row align-items-center">
+                  <div class="col-lg-6 col-sm-7">
+                      <p class="mb-0 f_400">© Open English... 2021 All rights reserved.</p>
+                      <p class="mb-0 f_400">DEVELOPED BY JOSUE VAZQUEZ FRANCO.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+    <script>
+      var one = new Audio('audios/one.mp3');
+      var two = new Audio('audios/two.mp3');
+      var three = new Audio('audios/three.mp3');
+      var four = new Audio('audios/four.mp3');
+      var five = new Audio('audios/five.mp3');
+      var six = new Audio('audios/six.mp3');
+      var seven = new Audio('audios/seven.mp3');
+      var eight = new Audio('audios/eight.mp3');
+      var nine = new Audio('audios/nine.mp3');
+      var ten = new Audio('audios/ten.mp3');
+
+      function myAudioFunction(letter) {
+          if(letter == 'one') {
+              one.play();
+          }
+          if(letter == 'two') {
+              two.play();
+          }
+          if(letter == 'three') {
+              three.play();
+          }
+          if(letter == 'four') {
+              four.play();
+          }
+          if(letter == 'five') {
+              five.play();
+          }
+          if(letter == 'six') {
+              six.play();
+          }
+          if(letter == 'seven') {
+              seven.play();
+          }
+          if(letter == 'eight') {
+              eight.play();
+          }
+          if(letter == 'nine') {
+              nine.play();
+          }
+          if(letter == 'ten') {
+              ten.play();
+          }
+      }
+  </script>
+
+    
+</body>
+</html>
